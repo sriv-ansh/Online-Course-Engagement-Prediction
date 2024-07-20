@@ -27,11 +27,11 @@ This project aims to predict whether a student will enroll in an online course b
 ## Setup Instructions
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/online-course-engagement-prediction.git
+    https://github.com/sriv-ansh/Online-Course-Engagement-Prediction.git
     ```
 2. Navigate to the project directory:
     ```sh
-    cd online-course-engagement-prediction
+    Online-Course_Engagement
     ```
 3. Install the required packages:
     ```sh
@@ -41,7 +41,10 @@ This project aims to predict whether a student will enroll in an online course b
     ```sh
     python app.py
     ```
-
+5. The Web App Link:
+    ```sh
+    https://online-course-engagement-prediction.onrender.com/
+    ```
 ## Usage
 1. Open your web browser and go to `http://127.0.0.1:5000/`.
 2. Enter the required input features.
