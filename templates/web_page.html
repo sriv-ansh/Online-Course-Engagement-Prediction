@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Online Course Engagement Prediction 👨‍🎓👩‍🎓</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        select, input[type="text"], input[type="submit"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+            color: #333;
+        }
+        select {
+            height: 40px;
+        }
+        input[type="submit"] {
+            background-color: #000000;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            width: 100%;
+            margin-top: 10px;
+            padding: 12px 0;
+        }
+        input[type="submit"]:hover {
+            background-color: #8B4513;
+        }
+        .prediction {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+        .prediction h2 {
+            margin: 0;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Online Course Engagement Prediction</h1>
+        <form action="/predict" method="post">
+            <label for="CourseCategory">Course Category:</label>
+            <select id="CourseCategory" name="CourseCategory">
+                <option value="Science">Science</option>
+                <option value="Programming">Programming</option>
+                <option value="Business">Business</option>
+                <option value="Health">Health</option>
+                <option value="Arts">Arts</option>
+            </select>
+
+            <label for="TimeSpentOnCourse">Time Spent On Course:</label>
+            <input type="text" id="TimeSpentOnCourse" name="TimeSpentOnCourse" required>
+
+            <label for="NumberOfVideosWatched">Number Of Videos Watched:</label>
+            <input type="text" id="NumberOfVideosWatched" name="NumberOfVideosWatched" required>
+
+            <label for="NumberOfQuizzesTaken">Number Of Quizzes Taken:</label>
+            <input type="text" id="NumberOfQuizzesTaken" name="NumberOfQuizzesTaken" required>
+
+            <label for="QuizScores">Quiz Scores:</label>
+            <input type="text" id="QuizScores" name="QuizScores" required>
+
+            <label for="CompletionRate">Completion Rate:</label>
+            <input type="text" id="CompletionRate" name="CompletionRate" required>
+
+            <label for="DeviceType">Device Type:</label>
+            <select id="DeviceType" name="DeviceType">
+                <option value="Laptop">Laptop</option>
+                <option value="Mobile">Mobile</option>
+            </select>
+
+            <input type="submit" value="Submit">
+        </form>
+        {% if prediction %}
+        <div class="prediction">
+            <h2>{{ prediction }}</h2>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
