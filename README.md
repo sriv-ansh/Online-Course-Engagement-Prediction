@@ -46,9 +46,10 @@ This project aims to predict whether a student will enroll in an online course b
     https://online-course-engagement-prediction.onrender.com/
     ```
 ## Usage
-1. Open your web browser and go to `http://127.0.0.1:5000/`.
+1. Open Your Web Browser and paste https://online-course-engagement-prediction.onrender.com/ for web access
 2. Enter the required input features.
 3. Click on the "Predict" button to see the prediction result.
+
 
 ## Contributing
 Feel free to open issues or submit pull requests for improvements or bug fixes.
